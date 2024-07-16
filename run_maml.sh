@@ -3,7 +3,7 @@
 # Base Model -> MAML
 
 echo "[Start meta-training MAML ...]"
-python ./train_maml.py --folder=~/data \
+python ./train_maml.py --folder=/kaggle/working/data \
                  --dataset=miniimagenet \
                  --model=4-conv \
                  --hidden-size=64 \
@@ -19,7 +19,7 @@ python ./train_maml.py --folder=~/data \
                  --save-name=MAML
 
 echo "[Start meta-testing MAML ...]"
-python ./test_maml.py --folder=~/data \
+python ./test_maml.py --folder=/kaggle/working/data \
                  --dataset=miniimagenet \
                  --model=4-conv \
                  --device=cuda:0 \
