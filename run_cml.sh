@@ -16,7 +16,7 @@ python ./train_cml.py --folder=/kaggle/working/data \
                  --download \
                  --batch-iter=300 \
                  --loss-scaling=1 \
-                 --output-folder=/kaggle/working/result \
+                 --output-folder=./result \
                  --save-name=CML
 
 echo "[Start meta-testing CML ...]"
@@ -30,7 +30,7 @@ python ./test_cml.py --folder=/kaggle/working/data \
                  --classifier-step-size=0.5 \
                  --meta-lr=1e-3 \
                  --download \
-                 --output-folder=/kaggle/working/result \
+                 --output-folder=./result \
                  --save-name=CML \
                  --use-colearner
 
