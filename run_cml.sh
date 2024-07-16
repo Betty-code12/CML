@@ -3,7 +3,7 @@
 # Base Model -> MAML
 
 echo "[Start meta-training CML ...]"
-python ./train_cml.py --folder=~/data \
+python ./train_cml.py --folder=/kaggle/working/data \
                  --dataset=miniimagenet \
                  --model=4-conv_cml \
                  --hidden-size=64 \
@@ -16,11 +16,11 @@ python ./train_cml.py --folder=~/data \
                  --download \
                  --batch-iter=300 \
                  --loss-scaling=1 \
-                 --output-folder=./result \
+                 --output-folder=/kaggle/working/result \
                  --save-name=CML
 
 echo "[Start meta-testing CML ...]"
-python ./test_cml.py --folder=~/data \
+python ./test_cml.py --folder=/kaggle/working/data \
                  --dataset=miniimagenet \
                  --model=4-conv_cml \
                  --device=cuda:0 \
@@ -30,7 +30,7 @@ python ./test_cml.py --folder=~/data \
                  --classifier-step-size=0.5 \
                  --meta-lr=1e-3 \
                  --download \
-                 --output-folder=./result \
+                 --output-folder=/kaggle/working/result \
                  --save-name=CML \
                  --use-colearner
 
